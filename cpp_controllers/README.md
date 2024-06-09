@@ -12,7 +12,7 @@ T. Yamamoto & T. Sugihara (2020) Foot-guided control of a biped robot through ZM
 Advanced Robotics, 34:21-22, 1472-1489, DOI: 10.1080/01691864.2020.1827031
 ```
 
-Capture Pointを$x$、重心を$c$、ZMPを$z$と表すと、
+Capture Pointを $x$、重心を $c$、ZMPを $z$と表すと、
 $$x = c + \sqrt{\frac{h}{g}}\dot{c}$$
 $$\ddot{c} = \frac{g}{h}(c-z)$$
 であるから、
@@ -29,7 +29,7 @@ $$
 
 $$\dot{x} = w(x-u-l)$$
 
-($w$, $l$はconst. 例えば$w=\sqrt{\frac{g}{h}}$, $l=h$)が成り立つような系において、次のような最適制御問題を考える.
+( $w$, $l$はconst. 例えば $w=\sqrt{\frac{g}{h}}$, $l=h$)が成り立つような系において、次のような最適制御問題を考える.
 
 $$ u(t) = \mathrm{argmin} \frac{1}{2} \int^{T_n}_{T_0} (u(t) - u^r(t))^2 dt $$
 
@@ -220,7 +220,7 @@ $$
 \end{eqnarray}
 $$
 
-これを$D_i=$の式に代入し、($b_0=x_0-l$,$b_{n+1}=x_f-l$,$a_0=0$,$a_{n+1}=0$とおく)
+これを $D_i=$の式に代入し、( $b_0=x_0-l$, $b_{n+1}=x_f-l$, $a_0=0$, $a_{n+1}=0$とおく)
 
 $$
 \begin{eqnarray}
@@ -230,7 +230,7 @@ $$
 \end{eqnarray}
 $$
 
-これを$u = u^r + Cwe^{-wt}$に代入し、
+これを $u = u^r + Cwe^{-wt}$に代入し、
 
 $$
 \begin{eqnarray}
@@ -242,4 +242,4 @@ $$
 
 $$u(T_0) = u^r(T_0)+\frac{2}{(1-e^{-2w(T_n-T_0)})}\sum^n_{j=0} e^{-w(T_j-T_0)}\left[ u^r_j(T_j)-u^r_{j+1}(T_j)+\frac{a_j-a_{j+1}}{w}\right]$$
 
-(ただし$b_0=x_0-l$,$b_{n+1}=x_f-l$,$a_0=0$,$a_{n+1}=0$)
+(ただし $b_0=x_0-l$, $b_{n+1}=x_f-l$, $a_0=0$, $a_{n+1}=0$)
